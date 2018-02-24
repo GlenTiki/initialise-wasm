@@ -1,14 +1,14 @@
 {
-  "name": "load-wasm",
+  "name": "initialise-wasm",
   "version": "0.0.1",
-  "description": "A tool for loading wasm",
+  "description": "A tool for initialising wasm",
   "main": "index.js",
   "scripts": {
     "test": "standard && tap test.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/thekemkid/load-wasm.git"
+    "url": "git+ssh://git@github.com/thekemkid/initialise-wasm.git"
   },
   "keywords": [
     "load",
@@ -17,9 +17,9 @@
   "author": "Glen Keane <glenkeane.94@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/thekemkid/load-wasm/issues"
+    "url": "https://github.com/thekemkid/initialise-wasm/issues"
   },
-  "homepage": "https://github.com/thekemkid/load-wasm#readme",
+  "homepage": "https://github.com/thekemkid/initialise-wasm#readme",
   "devDependencies": {
     "rust-wasm": "^0.2.1",
     "standard": "^11.0.0",

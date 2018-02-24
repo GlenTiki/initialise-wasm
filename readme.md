@@ -1,4 +1,4 @@
-# load-wasm
+# initialise-wasm
 
 A small utility function to load small bits of wasm into your js programs. Supports loading asynchronously, with a promise, or loading scynchronously.
 
@@ -9,7 +9,7 @@ Sweet!
 ## Installation
 
 ```
-npm i load-wasm
+npm i initialise-wasm
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ In the following examples, the wasm that gets loaded exports a function `add_one
 To load your wasm with a promise, do the following:
 
 ```js
-const loader = require('load-wasm')
+const loader = require('initialise-wasm')
 
 loader(validWasm)
   .then(loadedModule => loadedModule.exports)
@@ -33,7 +33,7 @@ loader(validWasm)
 Of course, this works with async/await:
 
 ```js
-const loader = require('load-wasm')
+const loader = require('initialise-wasm')
 
 async function main () {
   const { exports: exportedFuncs } = await loader(validWasm)
@@ -46,7 +46,7 @@ main()
 To instantiate with a callback, set the `promise` option to `false` and provide a callback:
 
 ```js
-const loader = require('load-wasm')
+const loader = require('initialise-wasm')
 
 loader(validWasm, { promise: false }, ({exports: exportedFuncs}) => {
   const answer = exportedFuncs.add_one(41)
@@ -56,7 +56,7 @@ loader(validWasm, { promise: false }, ({exports: exportedFuncs}) => {
 To instantiate synchronously, set the `promise` option to `false` and provide no callback:
 
 ```js
-const loader = require('load-wasm')
+const loader = require('initialise-wasm')
 
 const { exports: exportedFuncs } = loader(validWasm, { promise: false })
 const answer = exportedFuncs.add_one(41)
@@ -65,7 +65,7 @@ const answer = exportedFuncs.add_one(41)
 You can additionally pass WebAssembly options to the instantiated module by using the importObject option:
 
 ```js
-const loader = require('load-wasm')
+const loader = require('initialise-wasm')
 
 async function main () {
   const memory = new WebAssembly.Memory({initial:10, maximum:100});
