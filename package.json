@@ -1,0 +1,36 @@
+{
+  "name": "load-wasm",
+  "version": "0.0.1",
+  "description": "A tool for loading wasm",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/thekemkid/load-wasm.git"
+  },
+  "keywords": [
+    "load",
+    "wasm"
+  ],
+  "author": "Glen Keane <glenkeane.94@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thekemkid/load-wasm/issues"
+  },
+  "homepage": "https://github.com/thekemkid/load-wasm#readme",
+  "devDependencies": {
+    "rust-wasm": "^0.2.1",
+    "standard": "^11.0.0",
+    "tap": "^11.1.1"
+  },
+  "standard": {
+    "globals": [
+      "WebAssembly"
+    ],
+    "ignore": [
+      "./build/"
+    ]
+  }
+}
